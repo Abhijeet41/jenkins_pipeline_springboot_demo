@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo "Build Stage is in progress ${mysecret}"
                 echo "param name is ${params.name}"
-                sh 'mvn compile'
+                bat 'mvn compile'
             }
             
         }
@@ -37,7 +37,7 @@ pipeline {
         stage ('Install'){
             steps {
                 echo "Test Stage is in progress"
-                sh 'mvn install'
+                bat 'mvn install'
                 archiveArtifacts artifacts: 'target/calculator-0.0.1-SNAPSHOT.jar', followSymlinks: false
             }
         }
