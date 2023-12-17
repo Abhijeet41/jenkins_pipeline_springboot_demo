@@ -15,7 +15,7 @@ pipeline {
     stages{
         stage ('Checkout') {
             steps{
-                checkout poll: false, scm: scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/vcjain/jenkins_pipeline_springboot_demo.git']])
+                checkout poll: false, scm: scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Abhijeet41/jenkins_pipeline_springboot_demo.git']])
             }
             
         }
@@ -30,7 +30,7 @@ pipeline {
         stage ('Test'){
             steps {
                 echo "Test Stage is in progress"
-                sh 'mvn test'
+                bat 'mvn test'
             }
             
         }
