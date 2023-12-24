@@ -19,8 +19,6 @@
 		<junit.version>4.12</junit.version>
 		<!-- Added dependency for Sonar Scanner -->
 		<sonar.organization>vcjain</sonar.organization>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -96,7 +94,7 @@
 
 				</executions>
 			</plugin>
-		
+			
 
 		</plugins>
 
