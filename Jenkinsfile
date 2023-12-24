@@ -2,7 +2,7 @@ pipeline {
     
     agent any
     tools {
-      maven 'mavenHome'
+      maven 'maven3'
     }
     
     environment {
@@ -44,7 +44,7 @@ pipeline {
         stage('NotifyByEmail'){
             steps{
                 emailext attachLog: true, attachmentsPattern: '$WORKSPACE/target/calculator-0.0.1-SNAPSHOT.jar', body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
-                Check console output at $BUILD_URL, Artifacts list at $RUN_ARTIFACTS_DISPLAY_URL to view the results.''', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'vcjain.training1@gmail.com'
+                Check console output at $BUILD_URL, Artifacts list at $RUN_ARTIFACTS_DISPLAY_URL to view the results.''', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'abhijeetmule41@gmail.com'
             }
         }
     }
